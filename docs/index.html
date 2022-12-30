@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Poggers</title>
+  </head>
+  <body>
+    <div class="colBtnsHolder">
+      <button type="button" class="colBtn" onclick="changeColor('ff0000')" style="background-color: #f00"></button>
+      <button type="button" class="colBtn" onclick="changeColor('ff7300')" style="background-color: #ff7300"></button>
+      <button type="button" class="colBtn" onclick="changeColor('ffc800')" style="background-color: #ffc800"></button>
+      <button type="button" class="colBtn" onclick="changeColor('37ff00')" style="background-color: #37ff00"></button>
+      <button type="button" class="colBtn" onclick="changeColor('0000ff')" style="background-color: #00f"></button>
+      <button type="button" class="colBtn" onclick="changeColor('cc00ff')" style="background-color: #cc00ff"></button>
+    </div>
+    <div class="colBtnsHolder">
+      <button type="button" onclick="changePattern('spartan')" class="colBtn" style="animation: spartSpin 2s infinite; animation-timing-function: linear"></button>
+      <button type="button" onclick="changePattern('america')" class="colBtn" style="background: linear-gradient(45deg, rgba(255, 0, 0, 1) 33%, rgba(31, 22, 224, 1) 33%, rgba(0, 0, 255, 1) 66%, rgba(255, 255, 255, 1) 66%)"></button>
+      <button type="button" onclick="changePattern('cops')" class="colBtn" style="background: linear-gradient(45deg, rgba(0, 0, 255, 1) 50%, rgba(255, 0, 0, 1) 50%)"></button>
+      <button type="button" onclick="changePattern('start')" class="colBtn" style="background: linear-gradient(45deg, rgba(0, 0, 255, 1) 50%, rgba(0, 0, 0, 1) 50%)"></button>
+      <button type="button" onclick="changePattern('twinkle')" class="colBtn" style="background: linear-gradient(45deg, rgba(0, 0, 0, 1) 50%, rgba(255, 0, 0, 1) 50%)"></button>
+    </div>
+    <input type="range" style="display: inline" id="brightnessSlider" min="0" max="100" value="50" width="0%" oninput="UpdateBrightness(this.value)" />
+    <div id="brightnessNum" style="display: inline">{}</div>
+    <div class="colBtnsHolder">
+      <span>Same network?</span>
+      <input type="checkbox" id="networkToggle" onclick="networkChange()" checked />
+      <!-- <span>Public IP: </span><input id="ipBox" type="text" placeholder="192.168.1.24" /> -->
+    </div>
+    <div class="colBtnsHolder">
+      <button type="button" class="bigBtn" onclick="changeColor('000000')">Off</button>
+      <button type="button" class="bigBtn" onclick="ring()">Ring</button>
+    </div>
+    <!-- <p>GPU: {}</p> -->
+  </body>
+  <script src="./client.js"></script>
+</html>
